@@ -1,0 +1,177 @@
+/* === 1. Impostazioni generali === */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f6e2db;
+}
+
+h3, h4, p {
+  margin: 0 0 10px 0;
+}
+
+/* === 2. Layout comuni === */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100vh;
+  background-color: #c8645c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+
+.sidebar .icon {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.header {
+  background-color: #a8433b;
+  color: white;
+  padding: 17px 20px;
+  text-align: center;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+}
+
+.header div {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.top-right-img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.main {
+  margin-left: 60px;
+  padding: 20px;
+}
+
+/* === 3. Componenti riutilizzabili === */
+.button {
+  background-color: #a8433b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* === 4. Pagine specifiche === */
+/* Home */
+.hero {
+  background-color: #d4b4a9;
+  height: 180px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.about {
+  color: #8a3d3a;
+  margin-bottom: 30px;
+}
+
+.about h3 {
+  color: #a8433b;
+}
+
+.product-highlight {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.product-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.product-text {
+  flex-grow: 1;
+}
+
+.stars {
+  color: #555;
+  font-size: 18px;
+}
+
+/* Prodotti */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Dettaglio Prodotto */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-detail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-detail .info {
+  color: #333;
+}
+
+/* Login/Registrazione */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
