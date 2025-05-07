@@ -23,12 +23,13 @@ h3, h4, p {
   padding-top: 20px;
   gap: 30px;
 }
-
+/*Ricordati di distanziare meglio le icone e con un comando comodo (solo se proprio proprio con il margin-bottom)*/
 .sidebar .icon {
   width: 24px;
   height: 24px;
   text-align: center;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .header {
@@ -101,8 +102,20 @@ h3, h4, p {
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-bottom: 10px;
 }
 
+.logo-img {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 30%;
+  border-radius: 100%;
+  
+}
+
+/*O centri l'immagine oppure sposti il testo alla sua sinistra*/
 .product-img {
   width: 120px;
   height: 120px;
