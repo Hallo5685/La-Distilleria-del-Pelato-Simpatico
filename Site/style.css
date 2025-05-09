@@ -98,6 +98,30 @@ h3, h4, p {
   color: #a8433b;
 }
 
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.about-text {
+  flex: 1;
+  color: #8a3d3a;
+}
+
+.about-text h3 {
+  color: #a8433b;
+  margin-bottom: 10px;
+}
+
+.about-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .product-highlight {
   display: flex;
   gap: 20px;
@@ -174,17 +198,71 @@ h3, h4, p {
 /* Login/Registrazione */
 .form-container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 40px auto;
   background: white;
-  padding: 20px;
+  padding: 20px 25px; /* ← Aggiunto padding orizzontale */
   border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* facoltativo: effetto leggero */
 }
 
 .form-container input {
-  display: block;
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box; /* ← impedisce di “sforare” il contenitore */
+}
+
+/*Foter section*/
+
+.footer {
+  background-color: #d18070;
+  color: black;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  margin-left: 60px; /* allinea al margine sinistro dopo la sidebar */
+}
+
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-icons span {
+  font-size: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-column p {
+  margin: 5px 0;
 }
