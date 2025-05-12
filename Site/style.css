@@ -279,3 +279,76 @@ h3, h4, p {
 .footer-column p {
   margin: 5px 0;
 }
+
+/* === OneProdoctPage === */
+.one-product-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.one-product-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+.one-product-info {
+  flex: 1;
+}
+
+.one-product-info h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.one-product-info p {
+  margin: 5px 0;
+}
+
+.product-rating {
+  color: #555;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.product-buy {
+  margin-top: 20px;
+}
+
+.product-buy button {
+  background-color: #c8645c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 200px;
+}
+
+/* Recensioni */
+.product-reviews {
+  margin-top: 30px;
+}
+
+.product-reviews h3 {
+  margin-bottom: 10px;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.review-item img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
