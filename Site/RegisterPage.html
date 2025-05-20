@@ -11,15 +11,16 @@
     <div>Crea un nuovo account</div>
   </div>
   <div class="main form-container" id="container-RegisterPage">
-    <form>
-      <input type="text" placeholder="Nome" required>
-      <input type="text" placeholder="Cognome" required>
-      <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="Codice fiscale" required pattern="[A-Z0-9]{16}" maxlength="16" title="Inserisci un codice fiscale valido">
-      <input type="password" placeholder="Password" required>
-      <input type="password" placeholder="Conferma Password" required>
+    <form style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
+      <input type="text" placeholder="Nome" required style="flex-basis: 100%;">
+      <input type="text" placeholder="Cognome" required style="flex-basis: 100%;">
+      <input type="email" placeholder="Email" required style="flex-basis: 100%;">
+      <input type="text" placeholder="Codice fiscale" required pattern="[A-Z0-9]{16}" maxlength="16" title="Inserisci un codice fiscale valido" style="flex-basis: 100%;">
+      <input type="password" placeholder="Password" required style="flex-basis: 100%;">
+      <input type="password" placeholder="Conferma Password" required style="flex-basis: 100%;">
       <!--RICORDATI DI AGGIUNGERE UN CAMPO-->
-      <button class="button">Registrati</button>
+      <a href="HomePage.html" class="button" style="flex: 1; text-align: center; text-decoration: none;">Home</a>
+      <button class="button" style="flex: 1;; color: yellow">Registrati</button>
     </form>
   </div>
 </body>

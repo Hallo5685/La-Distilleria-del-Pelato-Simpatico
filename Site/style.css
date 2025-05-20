@@ -10,12 +10,13 @@ h3, h4, p {
 }
 
 /* === 2. Layout comuni === */
+
+
 .sidebar {
   position: fixed;
-  left: 0;
-  top: 0;
+  top: 60px;
+  height: calc(100vh - 60px);
   width: 60px;
-  height: 100vh;
   background-color: #c8645c;
   display: flex;
   flex-direction: column;
@@ -23,6 +24,8 @@ h3, h4, p {
   padding-top: 20px;
   gap: 30px;
 }
+
+
 /*Ricordati di distanziare meglio le icone e con un comando comodo (solo se proprio proprio con il margin-bottom)*/
 .sidebar .icon {
   width: 24px;
@@ -32,12 +35,21 @@ h3, h4, p {
   margin-bottom: 10px;
 }
 
+
+
 .header {
+  height: 60px;
   background-color: #a8433b;
   color: white;
-  padding: 17px 20px;
-  text-align: center;
-  position: relative;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   font-family: 'Playfair Display', serif;
 }
 
@@ -59,7 +71,9 @@ h3, h4, p {
 .main {
   margin-left: 60px;
   padding: 20px;
+  margin-top: 60px;
 }
+
 
 /* === 3. Componenti riutilizzabili === */
 .button {
@@ -317,10 +331,12 @@ h3, h4, p {
 
 .product-buy {
   margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .product-buy button {
-  background-color: #c8645c;
+  background-color: #a8433b;
   color: white;
   padding: 10px 20px;
   border: none;

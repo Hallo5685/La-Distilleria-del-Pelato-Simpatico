@@ -10,13 +10,14 @@
   <div class="header">
     <div>Accedi al tuo account</div>
   </div>
-  <!--Sistemare impaginazione di questo div-->
+
   <div class="main form-container" id="container-loginPage">
-    <form>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <button class="button">Login</button>
-      <p><br>Non hai un account? <a href="RegisterPage.html">Registrati</a></p>
+    <form style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
+      <input type="email" placeholder="Email" required style="flex-basis: 100%;">
+      <input type="password" placeholder="Password" required style="flex-basis: 100%;">
+      <a href="HomePage.html" class="button" style="flex: 1; text-align: center; text-decoration: none;">Home</a>
+      <button class="button" style="flex: 1;">Login</button>
+      <p style="flex-basis: 100%; text-align: center;"><br>Non hai un account? <a href="RegisterPage.html">Registrati</a></p>
     </form>
   </div>
 </body>
