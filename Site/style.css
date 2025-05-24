@@ -214,9 +214,9 @@ h3, h4, p {
   max-width: 400px;
   margin: 40px auto;
   background: white;
-  padding: 20px 25px; /* ← Aggiunto padding orizzontale */
+  padding: 20px 25px; 
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* facoltativo: effetto leggero */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-container input {
@@ -225,20 +225,38 @@ h3, h4, p {
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box; /* ← impedisce di “sforare” il contenitore */
+  box-sizing: border-box;
 }
 
 /*Foter section*/
 
+/*
+Era il footer originale, va tenuto in considerazione in caso di errore
 .footer {
   background-color: #d18070;
   color: black;
   padding: 20px;
   margin-top: 40px;
   font-size: 14px;
-  margin-left: 60px; /* allinea al margine sinistro dopo la sidebar */
+  margin-left: 60px;
 }
-
+/*
+Da valutare solo se I rimedi principali non funzionassero*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d18070;
+    color: black;
+    padding: 25px;
+    font-size: 14px;
+    text-align: center; 
+    margin-left: 60px;
+    margin-top: 40px;
+    /*Comando da tenere d'occhio per l'allineamento DESTRO del footer*/
+    width: 96%;
+}
 
 .footer-top {
   text-align: center;
