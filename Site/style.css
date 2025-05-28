@@ -25,7 +25,6 @@ h3, h4, p {
   gap: 30px;
 }
 
-
 /*Ricordati di distanziare meglio le icone e con un comando comodo (solo se proprio proprio con il margin-bottom)*/
 .sidebar .icon {
   width: 24px;
@@ -34,8 +33,6 @@ h3, h4, p {
   font-size: 24px;
   margin-bottom: 10px;
 }
-
-
 
 .header {
   height: 60px;
@@ -73,7 +70,6 @@ h3, h4, p {
   padding: 20px;
   margin-top: 60px;
 }
-
 
 /* === 3. Componenti riutilizzabili === */
 .button {
@@ -141,6 +137,8 @@ h3, h4, p {
   gap: 20px;
   align-items: center;
   margin-bottom: 10px;
+  padding-bottom: 0.5%;
+  border-bottom: 2px solid gray; /* Barra grigia sottile */
 }
 
 .logo-img {
@@ -228,9 +226,14 @@ h3, h4, p {
   box-sizing: border-box;
 }
 
+#container-RegisterPage, #container-loginPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*Foter section*/
-
-
 /*Era il footer originale, va tenuto in considerazione in caso di errore*/
 .footer {
   background-color: #d18070;
