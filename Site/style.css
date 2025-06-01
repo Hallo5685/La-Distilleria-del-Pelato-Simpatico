@@ -190,6 +190,43 @@ h3, h4, p {
   border-radius: 10px;
 }
 
+/*Prodocts's Search Bar*/
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 30px auto;
+  max-width: 700px;
+  background-color: #c8645c;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.search-bar::placeholder {
+  color: #f0d7d3;
+  opacity: 1;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+
 /* Dettaglio Prodotto */
 .product-detail {
   display: flex;
