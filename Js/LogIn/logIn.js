@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     if (utenteTrovato) {
-      alert("Login effettuato con successo!");
       localStorage.setItem("utenteLoggato", utenteTrovato.email);
       window.location.href = "../Site/HomePage.html";
     } else {

@@ -94,9 +94,16 @@ h3, h4, p {
 /* Home */
 .hero {
   background-color: #d4b4a9;
-  height: 180px;
+  height: 550px;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+/*Foto nel riquadro HERO*/
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 20px; 
 }
 
 .about {
@@ -341,12 +348,6 @@ h3, h4, p {
   top: -15px;
 }
 
-/*.social-icons span {
-  font-size: 20px;
-  margin-right: 8px;
-  cursor: pointer;
-}*/
-
 .social-icons span {
   font-size: 20px;
   margin-right: 8px;
@@ -354,7 +355,6 @@ h3, h4, p {
   position: relative;
   top: -15px; /* Sposta leggermente le icone verso l'alto */
 }
-
 
 .footer-columns {
   display: flex;
@@ -443,12 +443,12 @@ h3, h4, p {
   object-fit: cover;
 }
 
-/*WishListPage desine*/
-/*.wishlist-icon {
-  font-size: 20px;
-  transition: color 0.3s ease;
-}*/
+/*Wish-List Page*/
 
 .wishlist-icon.active {
   color: red;
+}
+
+.title-H2 {
+  color: #c8645c; 
 }
