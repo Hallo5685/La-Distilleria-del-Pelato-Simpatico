@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,39 +14,55 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
 
   <div class="main">
     <div class="one-product-container">
-      <img src="../Image/Fragolino.JPG" alt="LiquoreAlCioccolato" class="one-product-image">
+      <img src="../Image/Fragolino.JPG" alt="Fragolino" class="one-product-image">
       <div class="one-product-info">
-        <h2>Fragolino</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Fragolino</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>15 €</p>
         <br>
+
         <h2>Descrizione</h2>
-        <p>Immagina di camminare tra le ombre di un bosco incantato, dove la luce del tramonto filtra dolcemente tra gli alberi e l’aria è pervasa dal profumo di fragoline selvatiche.<br>
-            Il nostro Fragolino è un elisir che cattura la magia di quei momenti segreti, quando la natura rivela i suoi tesori più preziosi.<br>
-            Ogni goccia è come un incantesimo, un sortilegio che ti avvolge e ti trasporta in un mondo fatato dove il tempo sembra fermarsi.
-            </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Fragoline di bosco appena raccolte, alcol di origine agricola, zucchero, acqua.<br>
-            Un infuso che porta con sé l’essenza pura del bosco, preparato con amore e un tocco di mistero
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Delicato, fruttato, incantevole. <br>
-            Il Fragolino è dolce come un sogno che si svela, fresco come una brezza che accarezza la pelle.
-            Ogni sorso è una danza leggera di fragole selvatiche, <br>che lascia una sensazione di freschezza eterea, come una favola che si dissolverà troppo in fretta, ma che rimarrà nel cuore.
+        <p>
+          Immagina di camminare tra le ombre di un bosco incantato, dove la luce del tramonto filtra dolcemente tra gli alberi
+          e l’aria è pervasa dal profumo di fragoline selvatiche.<br>
+          Il nostro Fragolino è un elisir che cattura la magia di quei momenti segreti, quando la natura rivela i suoi tesori più preziosi.<br>
+          Ogni goccia è come un incantesimo, un sortilegio che ti avvolge e ti trasporta in un mondo fatato dove il tempo sembra fermarsi.
         </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Fragoline di bosco appena raccolte, alcol di origine agricola, zucchero, acqua.<br>
+          Un infuso che porta con sé l’essenza pura del bosco, preparato con amore e un tocco di mistero.
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Delicato, fruttato, incantevole.<br>
+          Il Fragolino è dolce come un sogno che si svela, fresco come una brezza che accarezza la pelle.<br>
+          Ogni sorso è una danza leggera di fragole selvatiche che lascia una sensazione di freschezza eterea,
+          come una favola che si dissolverà troppo in fretta, ma che rimarrà nel cuore.
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Fragolino",
+              "prezzo": "15",
+              "img": "../Image/Fragolino.JPG",
+              "descrizione": "Liquore dolce alle fragoline di bosco."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -53,7 +70,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

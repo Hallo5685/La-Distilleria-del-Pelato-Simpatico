@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,6 +14,7 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
@@ -21,29 +23,43 @@
     <div class="one-product-container">
       <img src="../Image/Whisky.JPG" alt="Whisky" class="one-product-image">
       <div class="one-product-info">
-        <h2>Whisky</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Whisky</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>22 €</p>
         <br>
+
         <h2>Descrizione</h2>
-        <p>Ah, il whisky! Un nettare degno di un pirata come me, che sa come apprezzare il vero spirito della vita… e del mare.<br>
-           Ogni goccia è come un buon bottino trovato su una spiaggia deserta: ricca, avvolgente, e capace di farti sentire subito il capitano di te stesso.<br>
-           Una bevanda che scivola come una nave che solca le onde, e ti lascia con il sorriso di chi sa che la prossima avventura è dietro l’angolo… o nella bottiglia.<br>
-           Parola del capitan Jack Sparrow!
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Orzo selezionato, acqua pura, alcol di qualità, legno di rovere.<br>
+        <p>
+          Ah, il whisky! Un nettare degno di un pirata come me, che sa apprezzare il vero spirito della vita… e del mare.<br>
+          Ogni goccia è come un bottino su una spiaggia deserta: ricca, avvolgente, e ti fa sentire capitano di te stesso.<br>
+          Una bevanda che scivola come una nave sulle onde, lasciandoti con il sorriso di chi sa che la prossima avventura è... nella bottiglia.<br>
+          Parola del capitan Jack Sparrow!
+        </p>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Orzo selezionato, acqua pura, alcol di qualità, legno di rovere.<br>
           Lunga maturazione in botti che sanno raccontare la loro storia.
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Intenso, speziato, con note affumicate.</p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Intenso, speziato, con note affumicate.
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Whisky",
+              "prezzo": "22",
+              "img": "../Image/Whisky.JPG",
+              "descrizione": "Whisky speziato e affumicato."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -51,7 +67,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,6 +14,7 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
@@ -21,31 +23,44 @@
     <div class="one-product-container">
       <img src="../Image/Amaro.S.Maria.JPG" alt="Amaro" class="one-product-image">
       <div class="one-product-info">
-        <h2>Amaro S Maria</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Amaro S Maria</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>25 €</p>
         <br>
+
         <h2>Descrizione</h2>
-        <p>Un amaro che ti solleva, come una benedizione… ma decisamente più festoso! <br>
+        <p>
+          Un amaro che ti solleva, come una benedizione… ma decisamente più festoso!<br>
           L’Amaro Santa Maria è l’unione perfetta tra l’arte di fare liquoristica e un pizzico di sacra ironia.<br>
           Un sorso che ti farà sentire quasi “divino” — o almeno pronto a dimenticare tutti i peccati di una giornata intensa.
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Erbe segrete, radici misteriose, alcol di origine agricola e zucchero,<br>
-            il tutto infuso con una buona dose di fede… e un pizzico di follia.
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Amaro, avvolgente, con un tocco balsamico che fa quasi miracoli.<br>
-            Perfetto per chi cerca il giusto equilibrio tra sacro e profano, con una dolcezza che ti fa pensare:
-            “Forse, questa volta, sono stato davvero perdonato.
-          </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        </p>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Erbe segrete, radici misteriose, alcol di origine agricola e zucchero,<br>
+          il tutto infuso con una buona dose di fede… e un pizzico di follia.
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Amaro, avvolgente, con un tocco balsamico che fa quasi miracoli.<br>
+          Perfetto per chi cerca il giusto equilibrio tra sacro e profano, con una dolcezza che ti fa pensare:
+          “Forse, questa volta, sono stato davvero perdonato.”
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Amaro S Maria",
+              "prezzo": "25",
+              "img": "../Image/Amaro.S.Maria.JPG",
+              "descrizione": "Amaro aromatico con note balsamiche."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -53,7 +68,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

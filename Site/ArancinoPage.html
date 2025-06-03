@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,6 +14,7 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
@@ -21,34 +23,42 @@
     <div class="one-product-container">
       <img src="../Image/Arancino.JPG" alt="Amaro" class="one-product-image">
       <div class="one-product-info">
-        <h2>Arancino</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Arancino</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>15 €</p>
         <br>
         <h2>Descrizione</h2>
-        <p>Hakuna Matata, amici! Immaginate di godervi il sole caldo mentre l'inverno si tiene lontano, come una bella giornata nel cuore della savana.<br>
-            Il nostro liquore all’arancia è proprio così, un sorso che ti fa sentire come quando sgranocchi una mela (ok, forse non una mela, ma una bella arancia!) sotto un albero, <br>
-            mentre il vento ti accarezza il muso e c’è quel profumo che ti fa pensare che tutto vada per il meglio. <br>
-            Ogni goccia è come una di quelle giornate in cui non devi fare altro che rilassarti e goderti la vita… tipo quando eravamo io, Pumbaa e Simba a canticchiare senza pensieri!<br>
-            Il nostro liquore è un concentrato di arance fresche e succose, proprio come quelle che vediamo crescere sotto il sole,
-            trasformate con cura in una bevanda dorata che ti scalda il cuore… come una bella dormita sotto un cielo azzurro senza preoccupazioni!
+        <p>
+          Hakuna Matata, amici! Immaginate di godervi il sole caldo mentre l'inverno si tiene lontano, come una bella giornata nel cuore della savana.<br>
+          Il nostro liquore all’arancia è proprio così, un sorso che ti fa sentire come quando sgranocchi una mela (ok, forse non una mela, ma una bella arancia!) sotto un albero, <br>
+          mentre il vento ti accarezza il muso e c’è quel profumo che ti fa pensare che tutto vada per il meglio. <br>
+          Ogni goccia è come una di quelle giornate in cui non devi fare altro che rilassarti e goderti la vita… tipo quando eravamo io, Pumbaa e Simba a canticchiare senza pensieri!<br>
+          Il nostro liquore è un concentrato di arance fresche e succose, proprio come quelle che vediamo crescere sotto il sole,
+          trasformate con cura in una bevanda dorata che ti scalda il cuore… come una bella dormita sotto un cielo azzurro senza preoccupazioni!
         </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Erbe segrete, radici misteriose, alcol di origine agricola e zucchero,<br>
-            il tutto infuso con una buona dose di fede… e un pizzico di follia.
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Amaro, avvolgente, con un tocco balsamico che fa quasi miracoli.<br>
-            Perfetto per chi cerca il giusto equilibrio tra sacro e profano, con una dolcezza che ti fa pensare:
-            “Forse, questa volta, sono stato davvero perdonato.
-          </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+
+        <h2>Ingredienti</h2>
+        <p>Erbe segrete, radici misteriose, alcol di origine agricola e zucchero,<br>
+          il tutto infuso con una buona dose di fede… e un pizzico di follia.
+        </p><br>
+
+        <h2>Profilo gustativo</h2>
+        <p>Amaro, avvolgente, con un tocco balsamico che fa quasi miracoli.<br>
+          Perfetto per chi cerca il giusto equilibrio tra sacro e profano, con una dolcezza che ti fa pensare:
+          “Forse, questa volta, sono stato davvero perdonato.”
+        </p>
+
+        <br>
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Arancino",
+              "prezzo": "15",
+              "img": "../Image/Arancino.JPG",
+              "descrizione": "Liquore all’arancia, fresco e solare."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -56,7 +66,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

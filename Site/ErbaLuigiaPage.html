@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,39 +14,53 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
 
   <div class="main">
     <div class="one-product-container">
-      <img src="../Image/ErbaLuigiaMenta.JPG" alt="Whisky" class="one-product-image">
+      <img src="../Image/ErbaLuigiaMenta.JPG" alt="Erba Luigia" class="one-product-image">
       <div class="one-product-info">
-        <h2>Erba Luigia</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Erba Luigia</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>16 €</p>
         <br>
+
         <h2>Descrizione</h2>
-        <p>Un incontro tra due anime verdi: l’eleganza agrumata dell’erba luigia e la freschezza vivace della menta.<br>
-            Insieme danno vita a un liquore che sa di giardini d’estate, di pomeriggi lenti e respiri profondi.
-            <br>Un sorso è come aprire la finestra su un prato dopo la pioggia.
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Foglie fresche di erba luigia e menta, alcol di origine agricola, acqua, zucchero.<br>
-            Lavorazione artigianale, infusione lenta, nessun aroma artificiale.
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Fresco, erbaceo, balsamico. <br>
-            Le note agrumate dell’erba luigia si fondono con il tocco rinfrescante della menta per un liquore leggero,
-            dissetante e perfetto da gustare ghiacciato.
-            </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        <p>
+          Un incontro tra due anime verdi: l’eleganza agrumata dell’erba luigia e la freschezza vivace della menta.<br>
+          Insieme danno vita a un liquore che sa di giardini d’estate, di pomeriggi lenti e respiri profondi.<br>
+          Un sorso è come aprire la finestra su un prato dopo la pioggia.
+        </p>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Foglie fresche di erba luigia e menta, alcol di origine agricola, acqua, zucchero.<br>
+          Lavorazione artigianale, infusione lenta, nessun aroma artificiale.
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Fresco, erbaceo, balsamico.<br>
+          Le note agrumate dell’erba luigia si fondono con il tocco rinfrescante della menta per un liquore leggero,
+          dissetante e perfetto da gustare ghiacciato.
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Erba Luigia",
+              "prezzo": "16",
+              "img": "../Image/ErbaLuigiaMenta.JPG",
+              "descrizione": "Fresco liquore alle erbe e menta."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -53,7 +68,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

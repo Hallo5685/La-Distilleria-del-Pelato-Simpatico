@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,6 +14,7 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
@@ -21,30 +23,43 @@
     <div class="one-product-container">
       <img src="../Image/CremaAlPistacchio.JPG" alt="Pistacchio" class="one-product-image">
       <div class="one-product-info">
-        <h2>Crema al Pistacchio</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Crema al Pistacchio</h2>
         <div class="product-rating">★★★★★</div>
-        <p>200000000 €</p>
+        <p>20 €</p>
         <br>
+
         <h2>Descrizione</h2>
-        <p>È una coccola cremosa che profuma di Sicilia e golosità.<br>
-            Il nostro liquore al pistacchio nasce dal frutto più verde e prezioso, tostato con cura e trasformato
-            in una carezza dolce e vellutata, da assaporare lentamente.
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Pistacchi selezionati, alcol di origine agricola, latte, zucchero.<br>
-            Produzione artigianale, senza aromi artificiali né coloranti.
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Cremoso, ricco, avvolgente.<br>
-            Un liquore goloso dal gusto pieno di pistacchio, perfetto da servire freddo, come dessert o peccato di gola.
-            </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        <p>
+          È una coccola cremosa che profuma di Sicilia e golosità.<br>
+          Il nostro liquore al pistacchio nasce dal frutto più verde e prezioso, tostato con cura e trasformato
+          in una carezza dolce e vellutata, da assaporare lentamente.
+        </p>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Pistacchi selezionati, alcol di origine agricola, latte, zucchero.<br>
+          Produzione artigianale, senza aromi artificiali né coloranti.
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Cremoso, ricco, avvolgente.<br>
+          Un liquore goloso dal gusto pieno di pistacchio, perfetto da servire freddo, come dessert o peccato di gola.
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Crema al Pistacchio",
+              "prezzo": "20",
+              "img": "../Image/CremaAlPistacchio.JPG",
+              "descrizione": "Liquore cremoso al pistacchio."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -52,7 +67,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

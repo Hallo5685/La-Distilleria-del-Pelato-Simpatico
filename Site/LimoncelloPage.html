@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,6 +14,7 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
@@ -21,32 +23,45 @@
     <div class="one-product-container">
       <img src="../Image/Limoncello.JPG" alt="Limoncello" class="one-product-image">
       <div class="one-product-info">
-        <h2>Limoncello</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Limoncello</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>18 €</p>
         <br>
+
         <h2>Descrizione</h2>
-        <p>Nel cuore di ogni goccia batte il sole stesso.<br>
-        Come un raggio dorato che bacia la terra, il nostro limoncello è figlio della luce che accarezza gli agrumeti,
-        del profumo vibrante delle scorze, e del desiderio di fermarsi, di assaporare un attimo di felicità solare.
-        <br>È Apollo che, con il suo dorato respiro, infonde vita a ogni frutto, che prende forma in un liquore dal carattere inconfondibile, dolce e brillante.
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Scorze fresche di limoni non trattati, alcol di origine agricola, acqua, zucchero.<br>
-            Produzione artigianale, infusione lenta e naturale.
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Agrumato, dolce, vellutato.<br>
-            Un sorso che porta con sé la freschezza dell’alba e la dolcezza di un tramonto estivo,
-            perfetto a chiudere ogni pasto o per accendere un tocco di sole nei tuoi cocktail.
-            </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        <p>
+          Nel cuore di ogni goccia batte il sole stesso.<br>
+          Come un raggio dorato che bacia la terra, il nostro limoncello è figlio della luce che accarezza gli agrumeti,
+          del profumo vibrante delle scorze, e del desiderio di fermarsi, di assaporare un attimo di felicità solare.<br>
+          È Apollo che, con il suo dorato respiro, infonde vita a ogni frutto, che prende forma in un liquore dal carattere inconfondibile, dolce e brillante.
+        </p>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Scorze fresche di limoni non trattati, alcol di origine agricola, acqua, zucchero.<br>
+          Produzione artigianale, infusione lenta e naturale.
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Agrumato, dolce, vellutato.<br>
+          Un sorso che porta con sé la freschezza dell’alba e la dolcezza di un tramonto estivo,
+          perfetto a chiudere ogni pasto o per accendere un tocco di sole nei tuoi cocktail.
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Limoncello",
+              "prezzo": "18",
+              "img": "../Image/Limoncello.JPG",
+              "descrizione": "Limoncello artigianale, fresco e solare."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -54,7 +69,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

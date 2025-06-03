@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,44 +14,52 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
 
   <div class="main">
     <div class="one-product-container">
-      <img src="../Image/LiquoreAlCioccolato.JPG" alt="LiquoreAlCioccolato" class="one-product-image">
+      <img src="../Image/LiquoreAlCioccolato.JPG" alt="Liquore al Cioccolato" class="one-product-image">
       <div class="one-product-info">
-        <h2>Liquore al Cioccolato</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Liquore al Cioccolato</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>14.5 €</p>
         <br>
-        <h2>Descrizione</h2>
-        <p>Ah, miei cari amici, immaginate un abbraccio che non finisce mai, un dolce e caldo manto che vi avvolge.<br> 
-            Questo liquore al cioccolato è unico, come ogni invenzione che nasce nella mia testa! È denso, vellutato, profumatissimo come una cioccolata calda che ti accarezza il cuore… 
-            Ma, oh, c'è una sorpresa! Una piccola scintilla alcolica che rende il tutto ancora più irresistibile!<br>
-            Ogni sorso è come scivolare giù da un arcobaleno di cioccolato fondente,
-            dove il cacao amaro si unisce al latte in una danza di gusto che ti fa sentire come se stessi assaporando una delle delizie più segrete e incredibili della mia fabbrica!<br>
-            È un'esperienza che riscalda il cuore e ti fa sentire come se stessi assaporando un piacere proibito!
 
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Cacao amaro, cioccolato fondente, latte, zucchero, alcol di origine agricola!<br>
-            Fatto dai miei cari Umpa Lumpa, con tanto amore e senza aromi né conservanti!
-            Proprio come deve essere, perfetto e genuino!
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Cremoso, intenso, goloso – proprio come un sogno dolce da cui non vuoi più svegliarti!<br> Un liquore dolce ma equilibrato,
-            che ti fa venire voglia di un altro sorso e di un altro, e di un altro ancora!
-            Gustalo freddo, come dessert, o su un gelato, o su un dolce trasportando tutto in un mondo di pura delizia.
-            </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        <h2>Descrizione</h2>
+        <p>
+          Ah, miei cari amici, immaginate un abbraccio che non finisce mai, un dolce e caldo manto che vi avvolge.<br>
+          Questo liquore al cioccolato è unico, denso, vellutato e profumatissimo come una cioccolata calda che ti accarezza il cuore… con una scintilla alcolica irresistibile!<br>
+          Ogni sorso è come scivolare giù da un arcobaleno di cacao, in un mondo di dolcezza e delizia.
+        </p>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Cacao amaro, cioccolato fondente, latte, zucchero, alcol di origine agricola.<br>
+          Fatto artigianalmente, senza aromi né conservanti, solo amore e Umpa Lumpa.
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Cremoso, intenso, goloso – come un sogno dolce da cui non vuoi svegliarti!<br>
+          Dolce ma equilibrato, perfetto come dessert, su un gelato o semplicemente da gustare in pace.
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Liquore al Cioccolato",
+              "prezzo": "14.5",
+              "img": "../Image/LiquoreAlCioccolato.JPG",
+              "descrizione": "Cremoso e goloso al cioccolato fondente."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -58,7 +67,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="../Js/addToCart.js"></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,38 +14,45 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
 
   <div class="main">
     <div class="one-product-container">
-      <img src="../Image/GrappaAlPinoDiMugo.JPG" alt="LiquoreAlCioccolato" class="one-product-image">
+      <img src="../Image/GrappaAlPinoDiMugo.JPG" alt="Grappa al Pino di Mugo" class="one-product-image">
       <div class="one-product-info">
-        <h2>Grappa al Pino di Mugo</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Grappa al Pino di Mugo</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>21 €</p>
         <br>
         <h2>Descrizione</h2>
         <p>Profuma di bosco e silenzio, di legno umido e vento di montagna.<br>
-            La nostra grappa al pino mugo è un omaggio alle cime selvatiche,
-            dove le pigne raccolte a mano custodiscono tutta la forza e l’aroma della natura alpina.
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Grappa artigianale, pigne di pino mugo fresche, infusione naturale.<br>
-            Nessun aroma artificiale, solo pazienza, mani esperte e rispetto per la tradizione.
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Resinosa, balsamica, intensa.<br>
-            Una grappa dal carattere forte, con sentori freschi e legnosi, perfetta per chi ama i sapori autentici e decisi.
-            </p>
-          <!--A capo tra bottone e testo-->
-          <br>
+           La nostra grappa al pino mugo è un omaggio alle cime selvatiche,
+           dove le pigne raccolte a mano custodiscono tutta la forza e l’aroma della natura alpina.
+        </p>
+        <br>
+        <h2>Ingredienti</h2>
+        <p>Grappa artigianale, pigne di pino mugo fresche, infusione naturale.<br>
+           Nessun aroma artificiale, solo pazienza, mani esperte e rispetto per la tradizione.
+        </p>
+        <br>
+        <h2>Profilo gustativo</h2>
+        <p>Resinosa, balsamica, intensa.<br>
+           Una grappa dal carattere forte, con sentori freschi e legnosi, perfetta per chi ama i sapori autentici e decisi.
+        </p>
+        <br>
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Grappa al Pino di Mugo",
+              "prezzo": "21",
+              "img": "../Image/GrappaAlPinoDiMugo.JPG",
+              "descrizione": "Grappa resinosa e balsamica al pino mugo."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -52,7 +60,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>

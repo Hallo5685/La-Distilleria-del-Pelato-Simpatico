@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>One Product Page</title>
   <link rel="stylesheet" href="style.css">
+  <script src="../Js/addToCart.js" defer></script>
 </head>
 <body>
   <div class="sidebar">
@@ -13,6 +14,7 @@
     <a href="WishListPage.html" class="icon">❤️</a>
     <a href="LoginPage.html" class="icon">👤</a>
   </div>
+
   <div class="header">
     <div>La Distilleria del Pelato Simpatico</div>
   </div>
@@ -21,32 +23,45 @@
     <div class="one-product-container">
       <img src="../Image/Liquirizia.JPG" alt="Liquirizia" class="one-product-image">
       <div class="one-product-info">
-        <h2>Liquirizia</h2> 
-        <!--Da mettere allineato alla sinistra del whisky oppure allineato al testo (lato sinistro)-->
+        <h2>Liquirizia</h2>
         <div class="product-rating">★★★★★</div>
-        <p>20 €</p>
+        <p>13.5 €</p>
         <br>
+
         <h2>Descrizione</h2>
-        <p>Oh, oh, oh! Un viaggio, un viaggio nei sentieri segreti e tortuosi dei sapori più strani, proprio come quella volta che il Bianconiglio ha perso il suo orologio… e noi siamo finiti a prendere il tè con un eremita in una teiera!<br>
-            Il nostro liquore alla liquirizia è un incontro tra due mondi, un matrimonio tra il dolce e l’amaro, come un cappello che non sai mai se ti sta bene o no, ma che non smetti mai di indossare! <br>
-            Un'esperienza per chi ha il coraggio di affondare i denti nel bizzarro, un assaggio che non si dimentica, che fa ballare le papille! <br>
-            Ogni sorso è una pazzia di aromi, un’esplosione che fa "BOOM!" nel palato e lo avvolge come un mantello di fantasia!<br>
-            Non è magia, è... è pura liquirizia! Non chiedetemi come ci sono finito, ma qui ci siamo, ed è perfetto per i non compleanni!
-        </p> <br>
-          <h2>Ingredienti</h2>
-          <p>Liquirizia pura, alcol di origine agricola, acqua, zucchero!<br>
-            Un infuso artigianale con ingredienti selezionati, senza nessun, ma proprio nessun, aromi artificiali (no, no, non ci piace far finta di niente, eh?).
-          </p><br>
-          <h2>Profilo gustativo</h2>
-          <p>Intenso, aromatico, persistente – sì, persistente! Come una risata che non finisce mai!<br>
-            Un liquore dal gusto deciso, con note dolci che si rincorrono con il finale amaro che ti fa dire "Ancora!". <br>
-            Perfetto liscio, o… in un cocktail tutto da scoprire, per chi ama far ballare le bottiglie!<br> Ah! Che divertimento!</p>
-          <!--A capo tra bottone e testo-->
-          <br>
+        <p>
+          Oh, oh, oh! Un viaggio nei sentieri segreti dei sapori più strani, proprio come quella volta che il Bianconiglio ha perso l’orologio!<br>
+          Il nostro liquore alla liquirizia è un matrimonio tra il dolce e l’amaro, come un cappello che non sai mai se ti sta bene, ma che continui a indossare!<br>
+          Un'esperienza per chi ha il coraggio di affondare i denti nel bizzarro. Ogni sorso è una pazzia di aromi che avvolge come un mantello di fantasia!<br>
+          Non è magia, è pura liquirizia! Perfetto per i non compleanni!
+        </p>
+        <br>
+
+        <h2>Ingredienti</h2>
+        <p>
+          Liquirizia pura, alcol di origine agricola, acqua, zucchero!<br>
+          Infuso artigianale, ingredienti selezionati, nessun aroma artificiale.
+        </p>
+        <br>
+
+        <h2>Profilo gustativo</h2>
+        <p>
+          Intenso, aromatico, persistente – come una risata che non finisce mai!<br>
+          Dal gusto deciso, con note dolci seguite da un finale amaro che ti fa dire "Ancora!".<br>
+          Perfetto liscio o in un cocktail per chi ama far ballare le bottiglie!
+        </p>
+        <br>
+
         <div class="product-buy">
-          <a href="EmptyCartPage.html">
-          <button>Acquista</button>
-          </a>
+          <button id="acquista"
+            data-prodotto='{
+              "nome": "Liquirizia",
+              "prezzo": "13.5",
+              "img": "../Image/Liquirizia.JPG",
+              "descrizione": "Liquore intenso alla liquirizia pura."
+            }'>
+            Acquista
+          </button>
         </div>
       </div>
     </div>
@@ -54,7 +69,6 @@
     <div class="product-reviews">
       <h3>Recensioni</h3>
       <div class="review-item">
-        <!--Modifica la foto con un alpaca-->
         <img src="../Image/EmmaRecensione.jpg" alt="Ella">
         <div>
           <strong>Ella</strong>
