@@ -1,14 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
   const WISHLIST_KEY = "wishlist";
 
-  // Funzione di salvataggio
   function salvaWishlist(lista) {
     localStorage.setItem(WISHLIST_KEY, JSON.stringify(lista));
   }
 
-  // Funzione di lettura
   function caricaWishlist() {
     return JSON.parse(localStorage.getItem(WISHLIST_KEY)) || [];
+  }
+
+  function nomeToPagina(nome) {
+    return (
+      nome
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "")
+        .replace(/\s+/g, "")
+        .replace(/[^a-zA-Z0-9]/g, "")
+        + "Page.html"
+    );
   }
 
   // === PAGINA PRODOTTI ===
@@ -21,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const nomeEl = prodotto.querySelector("h3") || prodotto.querySelector("h4");
       const nome = nomeEl ? nomeEl.textContent.trim() : "";
 
-      // Se già nella lista → cuore rosso
       if (lista.some(p => p.nome === nome)) {
         cuore.classList.add("active");
         cuore.innerHTML = "❤️";
@@ -35,13 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
         let listaCorrente = caricaWishlist();
 
         if (cuore.classList.contains("active")) {
-          // Se già attivo → rimuovi
           listaCorrente = listaCorrente.filter(p => p.nome !== nome);
           salvaWishlist(listaCorrente);
           cuore.classList.remove("active");
           cuore.innerHTML = "♡";
         } else {
-          // Aggiungi se non c'è
           const nuovo = { nome, img };
           if (!listaCorrente.some(p => p.nome === nome)) {
             listaCorrente.push(nuovo);
@@ -64,19 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
       main.innerHTML = '<div class="card"><p>Non hai salvato <strong>nulla</strong> nella tua lista dei desideri.</p></div>';
     } else {
       const titolo = document.createElement("h2");
-      /*titolo.textContent = "Lista dei Desideri";
-      titolo.style.textAlign = "center";
-      titolo.style.color = "#a8433b";*/
       main.appendChild(titolo);
 
       const griglia = document.createElement("div");
       griglia.className = "products-grid";
-
+      //Formatta il titolo dekla pagina
       lista.forEach(item => {
+        const nomePagina = nomeToPagina(item.nome);
+
         const card = document.createElement("div");
         card.className = "product-card";
         card.innerHTML = `
-          <a href="product.html?nome=${encodeURIComponent(item.nome)}">
+          <a href="${nomePagina}">
             <img src="${item.img}" alt="${item.nome}">
           </a>
           <p><strong>${item.nome}</strong></p>
@@ -89,4 +94,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-/*MODIFICARE IL COLLEGAMENTO TRA GLI ELEMENTI APPENA INSERITI NELLA WISHLISTPAGE.HTML e LE RELATIVE PAGINE DEI PRODOTTI */
